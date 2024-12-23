@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - Hope</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="cart-page">
+    <!-- Header (Same as Homepage) -->
+    <header>
+        <div class="container">
+            <h1 class="logo">L'Esprit d'Espoir</h1>
+            <div class="nav-toggle">Menu</div>
+
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="cart-section">
+            <div class="container">
+                <h2>Your Shopping Cart</h2>
+                <div id="cart-container">
+                    <!-- Cart Items Will Be Injected Here -->
+                </div>
+                <div class="cart-summary">
+                    <h3>Total: $<span id="cart-total">0.00</span></h3>
+                    <button id="checkout-button" class="btn">Checkout</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Confirmation Modal -->
+    <div id="checkout-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Confirm Checkout</h2>
+            <p>Are you sure you want to checkout with a total price of $<span id="modal-cart-total">0.00</span>?</p>
+            <button id="confirm-checkout" class="btn">Yes</button>
+            <button id="cancel-checkout" class="btn">No</button>
+        </div>
+    </div>
+
+    <!-- Footer (Same as Homepage) -->
+    <footer>
+        <div class="container">
+            <p>Contact us: info@perfumeparadise.com | Follow us on 
+                <a href="#">Facebook</a>, 
+                <a href="#">Instagram</a>, 
+                <a href="#">Twitter</a>
+            </p>
+            <p>&copy; 2024 Perfume Paradise. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>
