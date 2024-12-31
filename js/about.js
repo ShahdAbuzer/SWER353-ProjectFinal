@@ -1,4 +1,6 @@
 $(document).ready(function () {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
     function setupNav() {
         const isMobile = $(window).width() <= 700;
 
@@ -24,6 +26,11 @@ $(document).ready(function () {
         };
     }
 
+    function updateCartCount() {
+        $('#cart-count').text(cart.length);
+    }
+
     setupNav();
+    updateCartCount();
     $(window).resize(debounce(setupNav, 200));
 });

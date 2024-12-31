@@ -127,8 +127,22 @@ $(document).ready(function () {
   }
 
   function showCustomAlert(message, type) {
+    let alertContainer = $('.custom-alert-container');
+    if (!alertContainer.length) {
+        $('body').append('<div class="custom-alert-container"></div>');
+        alertContainer = $('.custom-alert-container');
+        alertContainer.css({
+            position: 'fixed',
+            bottom: '0',
+            right: '0',
+            width: '300px',
+            zIndex: '9999',
+            display: 'flex',
+            flexDirection: 'column'
+        });
+    }
     const alertBox = $("<div>").addClass("custom-alert").text(message);
-    $("body").append(alertBox);
+    alertContainer.append(alertBox);
     setTimeout(() => alertBox.addClass("show"), 10);
     setTimeout(() => {
       alertBox.removeClass("show");
